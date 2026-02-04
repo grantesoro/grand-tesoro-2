@@ -37,20 +37,38 @@
     }
 
     /* HERO */
-.hero-subtitle {
-  font-size: 1.6rem;
-  color: var(--accent);
-  font-weight: 600;
-  margin-top: 24px;
-  line-height: 1.5;
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 120px 20px 80px;
+  background:
+    radial-gradient(circle at top, rgba(255,215,0,0.15), transparent 60%),
+    linear-gradient(180deg, #0b0b0b, #000);
+
+  color: white;
 }
 
-.hero-subtitle span {
-  display: block;
-  margin-top: 12px;
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  font-weight: 500;
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  max-width: 900px;
+}
+
+.hero p {
+  margin-top: 28px;
+  font-size: 1.3rem;
+  max-width: 700px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
 }
 
 }
@@ -472,12 +490,18 @@ section {
 </head>
 <body>
 
- <section class="hero" id="live">
+<section class="hero" id="live">
   <h1>VENTE DE BOOSTERS ONE PIECE EN DIRECT</h1>
 
+  <div class="hero-highlight">
+    <span>⚔️ Battles 1v1</span>
+    <span>🎁 Mystery Packs</span>
+    <span>🔴 Ouvertures en live</span>
+  </div>
+
   <p class="hero-subtitle">
-    Battles 1v1 • Mystery Packs • Ouvertures en live<br>
-    <span>Des règles claires. Du suspense. Des récompenses.</span>
+    Des duels en direct, des règles claires,<br>
+    et des récompenses à la clé.
   </p>
 
   <div class="cta-group">
@@ -496,6 +520,7 @@ section {
     </a>
   </div>
 </section>
+
 
 
 <section class="battle">
