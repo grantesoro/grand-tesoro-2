@@ -168,6 +168,37 @@
       color: var(--accent);
     }
 
+    .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.info-card span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.info-card strong {
+  color: var(--text-main);
+}
+
   </style>
 </head>
 <body>
@@ -185,37 +216,69 @@
 
 <section class="op14">
   <h2>Le Davy Back Fight – La Battle 1v1</h2>
-  <p>
-    Venez vous affronter dans un duel d’ouverture afin de tenter
-    d’emporter le trésor !
-    <br><br>
 
-    <strong>Les règles :</strong>
-    <br>
-    • 2 joueurs achètent chacun un booster  
-    <br>
-    • L’ouverture se fait intégralement en direct  
-    <br>
-    • Le joueur qui ouvre le meilleur booster remporte
-    la récompense annoncée
+  <p>
+    Venez vous affronter dans un <strong>duel d’ouverture</strong>
+    afin de tenter d’emporter le trésor.
+    Tout se joue en direct, sous vos yeux.
   </p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <span>👥</span>
+      <p><strong>2 joueurs</strong><br>Chacun achète un booster</p>
+    </div>
+
+    <div class="info-card">
+      <span>📦</span>
+      <p><strong>Ouverture en live</strong><br>Aucun tri, aucune manipulation</p>
+    </div>
+
+    <div class="info-card">
+      <span>🏆</span>
+      <p><strong>Le meilleur booster gagne</strong><br>La récompense annoncée</p>
+    </div>
+  </div>
 </section>
+
 
 
 <section class="op14">
   <h2>Mystery Packs – 1 booster officiel & 1 booster maison</h2>
+
   <p>
     Découvrez nos Mystery Packs avec
-    <strong>33% de chance de HIT minimum</strong> !
-    <br><br>
-
-    Chaque Mystery Pack est composé de :
-    <br>
-    • 1 booster officiel issu d’une <strong>display scellée</strong>  
-    <br>
-    • 1 booster maison avec <strong>33% de chance de HIT</strong>
+    <strong>33% de chance de HIT minimum</strong>.
+    Un format pensé pour le suspense et le plaisir du live.
   </p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <span>🎴</span>
+      <p>
+        <strong>Booster officiel</strong><br>
+        Issu d’une display scellée
+      </p>
+    </div>
+
+    <div class="info-card">
+      <span>💥</span>
+      <p>
+        <strong>Booster maison</strong><br>
+        33% de chance de HIT
+      </p>
+    </div>
+
+    <div class="info-card">
+      <span>🔴</span>
+      <p>
+        <strong>Ouverture intégrale</strong><br>
+        100% en direct
+      </p>
+    </div>
+  </div>
 </section>
+
 
     <section class="concept">
     <div class="concept-grid">
