@@ -198,7 +198,110 @@
 .info-card strong {
   color: var(--text-main);
 }
+<style>
+  ...
+  .info-card strong {
+    color: var(--text-main);
+  }
 
+  /* =========================
+     BATTLE 1v1 – SECTION
+     ========================= */
+
+  .battle {
+    background: radial-gradient(circle at top, #1b2138, #0b0e14);
+    text-align: center;
+  }
+
+  .battle h2 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 24px;
+  }
+
+  .battle-intro {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent);
+    max-width: 900px;
+    margin: 0 auto 60px;
+    line-height: 1.5;
+  }
+
+  .battle-intro span {
+    color: var(--text-main);
+    font-weight: 500;
+  }
+
+  .battle-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .battle-card {
+    background: rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 32px;
+    width: 260px;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .battle-card .icon {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+
+  .battle-card h3 {
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .vs {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent);
+  }
+
+  .battle-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+  }
+
+  .flow-card {
+    background: rgba(255,255,255,0.08);
+    padding: 28px 24px;
+    border-radius: 16px;
+    min-width: 200px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .flow-card.highlight {
+    background: linear-gradient(135deg, #e9c46a, #f4d58d);
+    color: #000;
+  }
+
+  .flow-card.reward {
+    background: linear-gradient(135deg, #b11226, #e63946);
+  }
+
+  .arrow {
+    font-size: 2.4rem;
+    color: var(--accent);
+  }
+
+  .battle-footer {
+    margin-top: 48px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
   </style>
 </head>
 <body>
@@ -214,32 +317,54 @@
     </div>
   </section>
 
-<section class="op14">
-  <h2>Le Davy Back Fight – La Battle 1v1</h2>
+<section class="battle">
+  <h2>⚔️ Battle 1v1 – Le format Gran Tesoro</h2>
 
-  <p>
-    Venez vous affronter dans un <strong>duel d’ouverture</strong>
-    afin de tenter d’emporter le trésor.
-    Tout se joue en direct, sous vos yeux.
+  <p class="battle-intro">
+    Venez vous affronter dans un <strong>duel d’ouverture</strong> afin de tenter
+    d’emporter le trésor. <br>
+    <span>Tout se joue en direct, sous vos yeux.</span>
   </p>
 
-  <div class="info-grid">
-    <div class="info-card">
-      <span>👥</span>
-      <p><strong>2 joueurs</strong><br>Chacun achète un booster</p>
+  <div class="battle-top">
+    <div class="battle-card">
+      <div class="icon">👤</div>
+      <h3>Joueur A</h3>
+      <p>Achète 1 booster</p>
     </div>
 
-    <div class="info-card">
-      <span>📦</span>
-      <p><strong>Ouverture en live</strong><br>Aucun tri, aucune manipulation</p>
-    </div>
+    <div class="vs">VS</div>
 
-    <div class="info-card">
-      <span>🏆</span>
-      <p><strong>Le meilleur booster gagne</strong><br>La récompense annoncée</p>
+    <div class="battle-card">
+      <div class="icon">👤</div>
+      <h3>Joueur B</h3>
+      <p>Achète 1 booster</p>
     </div>
   </div>
+
+  <div class="battle-flow">
+    <div class="flow-card">
+      📦<br>Ouverture en direct
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="flow-card highlight">
+      🏆<br>Meilleure carte = victoire
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="flow-card reward">
+      🎁<br>Récupère ta récompense
+    </div>
+  </div>
+
+  <p class="battle-footer">
+    Même booster • Règles annoncées • Aucun hasard caché
+  </p>
 </section>
+
 
 
 
