@@ -370,6 +370,80 @@
   }
 }
 
+/* =========================
+   HARMONISATION GLOBALE
+   ========================= */
+
+/* Titres de section */
+section h2 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Texte d’introduction sous les titres */
+section > p,
+.battle-intro {
+  font-size: 1.35rem;
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Cartes / blocs – style Battle */
+.info-card,
+.concept-card,
+.battle-card,
+.flow-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 0 30px rgba(233,196,106,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover global */
+.info-card:hover,
+.concept-card:hover,
+.battle-card:hover,
+.flow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 45px rgba(233,196,106,0.35);
+}
+
+/* Icônes */
+.info-card span,
+.battle-card .icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Texte dans les blocs */
+.info-card p,
+.concept-card p,
+.flow-card {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Mise en valeur */
+.highlight,
+.reward {
+  border-color: var(--accent);
+  box-shadow: 0 0 40px rgba(233,196,106,0.4);
+}
+
+/* Séparations visuelles */
+section {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
 
   </style>
 </head>
