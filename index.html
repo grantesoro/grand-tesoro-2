@@ -180,12 +180,21 @@ section h2 {
   margin: 0 auto 60px;
 }
 
-.arrow {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #e9c46a, transparent);
-  position: relative;
+.flow-arrow {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.flow-arrow svg {
+  width: 32px;
+  height: 32px;
+  fill: #e9c46a;
+  filter: drop-shadow(0 0 8px rgba(233,196,106,.6));
+}
+
 /* =========================
    RESPONSIVE
    ========================= */
@@ -212,7 +221,34 @@ section h2 {
   line-height: 1.5;
   color: var(--text-muted);
 }
+/* === CARTE BASE (PARTOUT) === */
+.card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.05),
+    0 0 30px rgba(0,0,0,0.4);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 40px rgba(233,196,106,.35),
+    0 0 80px rgba(233,196,106,.15);
+}
+.battle-flow .card {
+  min-width: 220px;
+}
+  @media (max-width: 768px) {
+  .flow-arrow svg {
+    transform: rotate(90deg);
+  }
+}
 
   </style>
 </head>
@@ -276,23 +312,34 @@ section h2 {
     </div>
   </div>
 
-  <div class="battle-flow">
-    <div class="flow-card">
-      📦<br>Ouverture en direct
-    </div>
+<div class="battle-flow">
 
-    <div class="arrow">➜</div>
-
-    <div class="flow-card highlight">
-      🏆<br>Meilleure carte = victoire
-    </div>
-
-    <div class="arrow"></div>
-
-    <div class="flow-card reward">
-      🎁<br>Récupère ta récompense
-    </div>
+  <div class="card">
+    📦<br>Ouverture en direct
   </div>
+
+  <div class="flow-arrow">
+    <svg viewBox="0 0 24 24">
+      <path d="M14 5l7 7-7 7v-4H3v-6h11z"/>
+    </svg>
+  </div>
+
+  <div class="card card-gold">
+    🏆<br>Meilleure carte = victoire
+  </div>
+
+  <div class="flow-arrow">
+    <svg viewBox="0 0 24 24">
+      <path d="M14 5l7 7-7 7v-4H3v-6h11z"/>
+    </svg>
+  </div>
+
+  <div class="card card-red">
+    🎁<br>Récupère ta récompense
+  </div>
+
+</div>
+
 
   <p class="battle-footer">
     Même booster • Règles annoncées • Aucun hasard caché
@@ -311,7 +358,7 @@ section h2 {
   </p>
 
   <div class="info-grid">
-    <div class="info-card">
+    <div class="card card-gold">
       <span>📦</span>
       <p>
         <strong>Booster officiel</strong><br>
