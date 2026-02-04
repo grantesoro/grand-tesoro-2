@@ -301,7 +301,76 @@
     margin-top: 48px;
     font-size: 1.1rem;
     color: var(--text-muted);
+  }/* ===== BASE CARTES (HARMONISATION SITE) ===== */
+.battle-card,
+.flow-card,
+.info-card,
+.concept-card {
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.battle-card:hover,
+.flow-card:hover,
+.info-card:hover,
+.concept-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 32px rgba(233,196,106,0.25);
+}
+.flow-card.highlight {
+  background: linear-gradient(135deg, #e9c46a, #caa64b);
+  color: #111;
+  box-shadow: 0 0 40px rgba(233,196,106,0.6);
+}
+
+.flow-card.reward {
+  background: linear-gradient(135deg, #c0392b, #8e1f1f);
+  box-shadow: 0 0 40px rgba(214,40,40,0.6);
+}
+    /* ===== FLÈCHES STYLÉES ===== */
+.arrow {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #e9c46a, transparent);
+  position: relative;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -6px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid #e9c46a;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+/* ===== RESPONSIVE BATTLE ===== */
+@media (max-width: 768px) {
+  .battle-top {
+    flex-direction: column;
+    gap: 24px;
   }
+
+  .vs {
+    font-size: 2rem;
+  }
+
+  .battle-flow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+    margin: 12px auto;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -353,7 +422,7 @@
       🏆<br>Meilleure carte = victoire
     </div>
 
-    <div class="arrow">➜</div>
+    <div class="arrow"></div>
 
     <div class="flow-card reward">
       🎁<br>Récupère ta récompense
